@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <h1>Jobs</h1>
+  <div class="jobs">
+    <div class="jobs_wrapper">
+      <p>Об опыте работы</p>
+    </div>
   </div>
 </template>
 
@@ -11,4 +13,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.jobs {
+  display: flex;
+  justify-content: center;
+  &_wrapper {
+    width: 48%;
+    height: 70vh;
+    border: 1px solid black;
+  }
+}
 </style>

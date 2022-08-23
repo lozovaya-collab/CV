@@ -1,6 +1,11 @@
 <template>
-  <div>
-    <h1>Education</h1>
+  <div class="education">
+    <div class="education_wrapper">
+      <p>Высшее образование</p>
+    </div>
+    <div class="education_wrapper">
+      <p>Тренинги</p>
+    </div>
   </div>
 </template>
 
@@ -11,4 +16,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.education {
+  display: flex;
+  justify-content: space-between;
+  &_wrapper {
+    width: 48%;
+    height: 70vh;
+    border: 1px solid black;
+  }
+}
 </style>

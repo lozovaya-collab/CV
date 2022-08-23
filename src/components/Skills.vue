@@ -1,6 +1,13 @@
 <template>
   <div>
-    <h1>Skills</h1>
+    <div class="skills">
+      <div class="skills_wrapper">
+        <p>Hard skills</p>
+      </div>
+      <div class="skills_wrapper">
+        <p>Soft skills</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -11,4 +18,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.skills {
+  display: flex;
+  justify-content: space-between;
+  &_wrapper {
+    width: 48%;
+    height: 70vh;
+    border: 1px solid black;
+  }
+}
 </style>

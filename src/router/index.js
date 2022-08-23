@@ -8,6 +8,7 @@ const routes = [{
         path: "/",
         name: "About me",
         component: AboutMe,
+
     },
     {
         path: "/jobs",

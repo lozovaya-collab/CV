@@ -51,7 +51,7 @@ export default {
   width: 40px;
 }
 :root {
-  --default: #d86af4;
+  --default: #d786ec;
   --hover: #efceff;
   --size: 80px;
   --distance: calc(var(--size) * -1.1);
@@ -148,37 +148,5 @@ nav {
   bottom: 20px;
   left: 20px;
   right: 20px;
-}
-
-/* unimportant styles */
-
-body {
-  color: black;
-  background: white;
-  padding: 20px;
-  font-family: "Heebo", sans-serif;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-p {
-  max-width: 70ch;
-  font-weight: 200;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-}
-
-svg {
-  width: calc(var(--size) / 3);
-  height: calc(var(--size) / 3);
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 </style>

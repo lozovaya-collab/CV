@@ -7,6 +7,11 @@
           <p class="info_FIO">Лозовая Анна Яковлевна</p>
           <p class="info_occupation">Front-end разработчик (Vue)</p>
         </div>
+        <a
+          target="_blank"
+          href="https://doc-14-8k-apps-viewer.googleusercontent.com/viewer/secure/pdf/0c3253t1uf45304bkdur29vtiou3d78t/1kgn9t5412uuevtk8oehave3d06tvu95/1661378325000/drive/02070401166249168837/ACFrOgDbSo0jcGk9wqFua5Yd7KQZF4wkWwApalt7vfrc4snqD1DSDJrwjqjM32JJY2a0V6Lm5mtnlIaRYsh784fiiWqLJErlcGSY-PBMqVbdVudqxSSJ8_-SXZGiF-KkXhkToofpq-R2aOi6h9JD?print=true&nonce=rrrvqlk1l9a3u&user=02070401166249168837&hash=50okrgjgjg78u3v4jgio8s2k0jslqklp"
+          ><img src="../assets/file.png" alt="Icon File Download" class="info_icon"
+        /></a>
       </div>
       <div class="description">
         <p class="description_text">
@@ -127,6 +132,7 @@ export default {
       }
     }
     .info {
+      position: relative;
       display: flex;
       width: 100%;
       height: 66%;
@@ -150,6 +156,12 @@ export default {
         font-family: "Montserrat", sans-serif;
         font-weight: 400;
         color: white;
+      }
+      &_icon {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 30px;
       }
     }
     .contacts {

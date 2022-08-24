@@ -111,7 +111,7 @@ export default {
       flex-direction: column;
       justify-content: space-between;
       margin-top: 30px;
-      padding: 15px 20px;
+      padding: 10px 20px;
       border: 5px solid #005f95;
       border-radius: 40px;
       font-family: "Montserrat", sans-serif;

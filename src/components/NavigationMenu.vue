@@ -22,10 +22,7 @@
         </li>
         <li>
           <router-link to="/education"
-            ><img
-              class="img-nav"
-              alt="Education"
-              src="../assets/mortarboard.png"
+            ><img class="img-nav" alt="Education" src="../assets/mortarboard.png"
           /></router-link>
         </li>
 
@@ -45,13 +42,13 @@ export default {
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .img-nav {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
 }
 :root {
-  --default: #d786ec;
+  --default: #005f95;
   --hover: #efceff;
   --size: 80px;
   --distance: calc(var(--size) * -1.1);

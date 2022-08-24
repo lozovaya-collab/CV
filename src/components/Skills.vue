@@ -4,9 +4,6 @@
       <div class="skills_wrapper">
         <p>Hard skills</p>
       </div>
-      <div class="skills_wrapper">
-        <p>Soft skills</p>
-      </div>
     </div>
   </div>
 </template>
@@ -20,7 +17,7 @@ export default {
 <style lang="scss" scoped>
 .skills {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   &_wrapper {
     width: 48%;
     height: 70vh;

@@ -17,11 +17,12 @@ export default {
 
 <style lang="scss">
 /* unimportant styles */
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 body {
   color: black;
   background: white;
-  margin: 50px;
+  margin: 50px 70px;
 }
 
 ul {

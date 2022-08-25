@@ -15,11 +15,11 @@ export default {
 @import "../../scss/main.scss";
 
 .headline {
-  width: 90%;
+  width: 100%;
   &_title {
     @include fontTitle($black, 600);
     width: 100%;
-
+    font-size: 25px;
     margin: 5px 0;
     text-align: center;
   }

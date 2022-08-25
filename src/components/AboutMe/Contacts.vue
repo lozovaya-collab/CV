@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import List from "@/components/UI/List";
+import ListLinks from "@/components/UI/ListLinks";
 import Headline from "@/components/UI/Headline";
 
 export default {
   name: "my-contacts",
   props: ["contacts"],
-  components: { list: List, headline: Headline },
+  components: { list: ListLinks, headline: Headline },
 };
 </script>
 

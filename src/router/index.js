@@ -1,8 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import AboutMe from "@/components/AboutMe/AboutMe";
-import Jobs from "@/components/Jobs";
+import JobsAndSkills from "@/components/JobsAndSkills/JobsAndSkills";
 import Education from "@/components/Education";
-import Skills from "@/components/Skills";
 
 const routes = [{
         path: "/",
@@ -13,8 +12,8 @@ const routes = [{
     },
     {
         path: "/jobs",
-        name: "Jobs",
-        component: Jobs,
+        name: "Jobs and Skills",
+        component: JobsAndSkills,
         icon: "suitcase.png",
     },
     {
@@ -23,12 +22,6 @@ const routes = [{
         component: Education,
         icon: "mortarboard.png",
     },
-    {
-        path: "/skills",
-        name: "Skills",
-        component: Skills,
-        icon: "skills.png",
-    }
 ];
 
 const router = createRouter({

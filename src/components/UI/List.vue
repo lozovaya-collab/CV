@@ -1,47 +1,42 @@
 <template>
-  <ul class="list">
-    <li v-for="(li, index) in items" :key="index" class="list__item">
-      <img
-        :src="require(`../../assets/${li.img}`)"
-        :alt="li.img.replace('.png', '')"
-        class="list__item icon"
-      />
-      <a class="list__item contact" :href="li.href">{{ li.text }}</a>
+  <ul class="list-default">
+    <li class="list-default_item" v-for="(item, index) in items" :key="index">
+      <span class="list-default_item__mark">&#8212;</span>
+      <p class="list-default_item__detail">{{ item.text }}</p>
     </li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: "list-elements",
+  name: "list-default",
   props: ["items"],
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../../scss/main.scss";
 
-.list {
+.list-default {
   margin-top: 20px;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  width: 90%;
-  &__item {
+  width: 100%;
+  &_item {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 60px;
+    height: auto;
+    margin: 0 0 10px 0;
     background: none;
-    .icon {
+    &__mark {
       margin-right: 15px;
-      width: 30px;
-      height: 30px;
     }
-    .contact {
+    &__detail {
       @include fontText($black, 400);
-      &:hover {
-        color: $blue;
-      }
+      font-size: 14px;
+      margin: 0;
     }
   }
 }

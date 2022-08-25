@@ -8,22 +8,26 @@ const routes = [{
         path: "/",
         name: "About me",
         component: AboutMe,
+        icon: "id-card.png",
 
     },
     {
         path: "/jobs",
         name: "Jobs",
         component: Jobs,
+        icon: "suitcase.png",
     },
     {
         path: "/education",
         name: "Education",
         component: Education,
+        icon: "mortarboard.png",
     },
     {
         path: "/skills",
         name: "Skills",
         component: Skills,
+        icon: "skills.png",
     }
 ];
 

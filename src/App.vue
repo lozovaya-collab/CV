@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import NavigationMenu from "@/components/NavigationMenu";
+import NavigationMenu from "@/components/UI/NavigationMenu";
 export default {
   name: "App",
   components: { NavigationMenu },

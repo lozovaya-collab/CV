@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav>
-      <aside class="goo">
+      <aside class="panel">
         <ul>
           <li></li>
           <li></li>
@@ -10,25 +10,9 @@
         </ul>
       </aside>
       <ul class="menu">
-        <li>
-          <router-link to="/">
-            <img class="img-nav" alt="Info" src="../assets/id-card.png"
-          /></router-link>
-        </li>
-        <li>
-          <router-link to="/jobs">
-            <img class="img-nav" alt="Job" src="../assets/suitcase.png"
-          /></router-link>
-        </li>
-        <li>
-          <router-link to="/education"
-            ><img class="img-nav" alt="Education" src="../assets/mortarboard.png"
-          /></router-link>
-        </li>
-
-        <li>
-          <router-link to="/skills">
-            <img class="img-nav" alt="Skills" src="../assets/skills.png"
+        <li v-for="(route, index) in routes" :key="index">
+          <router-link :to="route.path">
+            <img :alt="route.name" :src="require(`../../assets/${route.icon}`)"
           /></router-link>
         </li>
       </ul>
@@ -37,27 +21,31 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+
 export default {
   name: "navigation-menu",
+  computed: {
+    ...mapGetters({
+      routes: "RouterModule/GET_ROUTES",
+    }),
+  },
+  methods: {
+    ...mapActions(["getRouter"]),
+  },
+  beforeMount() {
+    console.log(this.routes);
+    this.$store.dispatch("RouterModule/getRouter", this.$router);
+  },
 };
 </script>
 
 <style lang="scss">
-.img-nav {
-  height: 60px;
-  width: 60px;
-}
 :root {
   --default: #005f95;
   --hover: #efceff;
   --size: 80px;
   --distance: calc(var(--size) * -1.1);
-}
-
-.goo,
-.goo ul {
-  background: inherit;
-  filter: url("#schlurp"); // this is reference to svg filter in HTML.
 }
 
 ul {
@@ -75,7 +63,7 @@ ul {
   }
 }
 
-.goo ul li {
+.panel ul li {
   &:before {
     content: "";
     width: 100%;
@@ -102,7 +90,6 @@ ul {
   z-index: 1;
   background: transparent;
   text-align: center;
-  // overflow: hidden;
 }
 
 .menu li {

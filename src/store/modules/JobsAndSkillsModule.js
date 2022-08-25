@@ -10,12 +10,25 @@ const state = {
             { text: "Работа с API" },
         ],
     }],
+    skills: [
+        { text: "JavaScript, ES6+" },
+        { text: "Vue.js + Vuex, Vue-router, Vuetify" },
+        { text: "HTML5, CSS3, Sass/Scss (БЭМ)" },
+        { text: "Протокол HTTP/HTTPS" },
+        { text: "RestAPI" },
+        { text: "Опыт разработки SPA (Vue 2)" },
+        { text: "Git" },
+        { text: "Node.js, Express" },
+    ]
 
 };
 const getters = {
     GET_JOBS(state) {
         return state.jobs;
-    }
+    },
+    GET_SKILLS(state) {
+        return state.skills;
+    },
 };
 const mutations = {
 

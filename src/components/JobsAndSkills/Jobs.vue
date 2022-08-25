@@ -9,7 +9,7 @@
       <div class="jobs_item__description">
         <span class="jobs_item__description name">{{ job.company }}</span>
         <span class="jobs_item__description occupation">{{ job.occupation }}</span>
-        <list-default :items="job.responsibilities"></list-default>
+        <list-default :mark="'&#8212;'" :items="job.responsibilities"></list-default>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      jobs: "JobsModule/GET_JOBS",
+      jobs: "JobsAndSkillsModule/GET_JOBS",
     }),
   },
   watch: {},

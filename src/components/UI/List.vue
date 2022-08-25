@@ -1,7 +1,7 @@
 <template>
   <ul class="list-default">
     <li class="list-default_item" v-for="(item, index) in items" :key="index">
-      <span class="list-default_item__mark">&#8212;</span>
+      <span class="list-default_item__mark">{{ mark }}</span>
       <p class="list-default_item__detail">{{ item.text }}</p>
     </li>
   </ul>
@@ -10,7 +10,7 @@
 <script>
 export default {
   name: "list-default",
-  props: ["items"],
+  props: ["items", "mark"],
 };
 </script>
 

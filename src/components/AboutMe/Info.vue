@@ -24,6 +24,7 @@ export default {
 .info {
   position: relative;
   display: flex;
+  align-items: center;
   width: 100%;
   height: 30%;
   background: $blue;
@@ -43,11 +44,13 @@ export default {
   &_occupation {
     @include fontText($white, 400);
     color: white;
+    font-size: 18px;
   }
   &_icon {
     width: 30px;
     height: 30px;
     position: absolute;
+    top: 30px;
     right: 30px;
   }
 }

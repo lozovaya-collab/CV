@@ -19,6 +19,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../scss/main.scss";
+
 .list {
   margin-top: 20px;
   display: flex;
@@ -36,12 +38,9 @@ export default {
       height: 30px;
     }
     .contact {
-      text-decoration: none;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 400;
-      color: #221f1f;
+      @include fontText($black, 400);
       &:hover {
-        color: #005f95;
+        color: $blue;
       }
     }
   }

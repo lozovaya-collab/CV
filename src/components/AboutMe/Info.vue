@@ -19,12 +19,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../scss/main.scss";
+
 .info {
   position: relative;
   display: flex;
   width: 100%;
   height: 30%;
-  background: #005f95;
+  background: $blue;
   border-radius: 40px;
   padding: 20px;
   box-sizing: border-box;
@@ -33,16 +35,13 @@ export default {
     margin-right: 30px;
   }
   &_FIO {
-    font-family: "Montserrat Alternates", sans-serif;
-    font-weight: 600;
-    color: white;
+    @include fontTitle($white, 600);
     font-size: 24px;
     line-height: 29px;
     width: 60px;
   }
   &_occupation {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
+    @include fontText($white, 400);
     color: white;
   }
   &_icon {

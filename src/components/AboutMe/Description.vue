@@ -24,18 +24,20 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@import "../../scss/main.scss";
+
 .description {
+  @include fontText($black, 400);
   height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 30px;
   padding: 20px;
-  border: 5px solid #005f95;
+  border: 5px solid $blue;
   border-radius: 40px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+
   box-sizing: border-box;
   &_text {
     line-height: 25px;
@@ -45,9 +47,9 @@ export default {
     }
   }
   &_location {
+    @include fontText($black, 500);
     display: flex;
     align-items: center;
-    font-weight: 500;
     &__icon {
       width: 20px;
       height: 20px;

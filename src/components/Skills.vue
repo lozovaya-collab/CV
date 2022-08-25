@@ -14,14 +14,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@import "../scss/main.scss";
 .skills {
   display: flex;
   justify-content: center;
   &_wrapper {
     width: 48%;
     height: 70vh;
-    border: 1px solid black;
+    border: 1px solid $black;
   }
 }
 </style>

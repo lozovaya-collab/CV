@@ -1,23 +1,21 @@
 <template>
-  <div>
-    <nav>
-      <aside class="panel">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </aside>
-      <ul class="menu">
-        <li v-for="(route, index) in routes" :key="index">
-          <router-link :to="route.path">
-            <img :alt="route.name" :src="require(`../../assets/${route.icon}`)"
-          /></router-link>
-        </li>
+  <nav>
+    <aside class="panel">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
-    </nav>
-  </div>
+    </aside>
+    <ul class="menu">
+      <li v-for="(route, index) in routes" :key="index">
+        <router-link :to="route.path">
+          <img :alt="route.name" :src="require(`../../assets/${route.icon}`)"
+        /></router-link>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
@@ -41,11 +39,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../scss/main.scss";
 :root {
-  --default: #005f95;
-  --hover: #efceff;
   --size: 80px;
-  --distance: calc(var(--size) * -1.1);
 }
 
 ul {
@@ -56,9 +52,9 @@ ul {
   li {
     width: var(--size);
     height: var(--size);
-    background: var(--default);
+    background: $blue;
     margin: 0 3px;
-    color: black;
+    color: $black;
     position: relative;
   }
 }
@@ -80,8 +76,6 @@ ul {
   }
   &.hover:before {
     transition: all 0.5s cubic-bezier(0.09, 1.98, 0.41, 0.71);
-    transform: translate3d(0, var(--distance), 0);
-    background: var(--hover);
   }
 }
 
@@ -112,13 +106,10 @@ ul {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: rgba(0, 0, 0, 0.6);
+
     transition: color 0.5s ease;
     width: 100%;
     height: 100%;
-  }
-  &:hover a {
-    color: rgba(0, 0, 0, 0.9);
   }
 }
 
@@ -126,7 +117,7 @@ nav {
   display: flex;
   justify-content: center;
   margin: 50px;
-  background: var(--default);
+  background: $blue;
   border-radius: 120px;
   position: fixed;
   bottom: 20px;

@@ -1,0 +1,14 @@
+@import './fonts';
+@import './variables';
+@import './mixins';
+@import './vue';
+body {
+    color: $black;
+    background: $white;
+    margin: 50px 70px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}

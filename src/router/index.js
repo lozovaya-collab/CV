@@ -4,7 +4,7 @@ import JobsAndSkills from "@/components/JobsAndSkills/JobsAndSkills";
 import Education from "@/components/Education";
 
 const routes = [{
-        path: "/",
+        path: "/CV",
         name: "About me",
         component: AboutMe,
         icon: "id-card.png",

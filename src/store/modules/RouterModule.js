@@ -15,8 +15,7 @@ const mutations = {
 };
 const actions = {
     getRouter({ commit }, payload) {
-        const routes = payload.options.routes
-        console.log(routes)
+        const routes = payload.options.routes;
         commit("SET_ROUTES", routes)
     }
 };

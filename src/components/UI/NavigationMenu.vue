@@ -32,7 +32,6 @@ export default {
     ...mapActions(["getRouter"]),
   },
   beforeMount() {
-    console.log(this.routes);
     this.$store.dispatch("RouterModule/getRouter", this.$router);
   },
 };

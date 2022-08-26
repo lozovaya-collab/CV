@@ -26,7 +26,7 @@ export default {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 30%;
+  height: 35%;
   background: $blue;
   border-radius: 40px;
   padding: 20px;

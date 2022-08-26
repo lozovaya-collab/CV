@@ -19,6 +19,10 @@ const state = {
         { text: "Опыт разработки SPA (Vue 2)" },
         { text: "Git" },
         { text: "Node.js, Express" },
+    ],
+    langs: [
+        { text: "Английский - Intermediate (B1)" },
+
     ]
 
 };
@@ -28,6 +32,9 @@ const getters = {
     },
     GET_SKILLS(state) {
         return state.skills;
+    },
+    GET_LANG(state) {
+        return state.langs;
     },
 };
 const mutations = {

@@ -2,6 +2,8 @@
   <div class="skills">
     <headline>НАВЫКИ</headline>
     <list-default class="skills_list" :mark="null" :items="skills"></list-default>
+    <headline>ЯЗЫКИ</headline>
+    <list-default class="skills_list" :mark="null" :items="languages"></list-default>
   </div>
 </template>
 
@@ -19,6 +21,7 @@ export default {
   computed: {
     ...mapGetters({
       skills: "JobsAndSkillsModule/GET_SKILLS",
+      languages: "JobsAndSkillsModule/GET_LANG",
     }),
   },
   watch: {},
@@ -38,7 +41,7 @@ export default {
   width: 60%;
   &_list {
     width: auto;
-    margin: 20px 0 0 0;
+    margin: 20px 0;
   }
 }
 </style>

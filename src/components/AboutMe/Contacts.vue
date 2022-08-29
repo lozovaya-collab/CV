@@ -23,5 +23,11 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 960px) {
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 600px) {
+    margin-bottom: 120px;
+  }
 }
 </style>

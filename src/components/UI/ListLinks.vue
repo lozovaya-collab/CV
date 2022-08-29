@@ -42,6 +42,9 @@ export default {
       &:hover {
         color: $blue;
       }
+      @media screen and (max-width: 1100px) {
+        font-size: 14px;
+      }
     }
   }
 }

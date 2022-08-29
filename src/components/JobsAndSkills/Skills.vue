@@ -1,9 +1,17 @@
 <template>
   <div class="skills">
     <headline>НАВЫКИ</headline>
-    <list-default class="skills_list" :mark="null" :items="skills"></list-default>
+    <list-default
+      class="skills_list"
+      :mark="null"
+      :items="skills"
+    ></list-default>
     <headline>ЯЗЫКИ</headline>
-    <list-default class="skills_list" :mark="null" :items="languages"></list-default>
+    <list-default
+      class="skills_list"
+      :mark="null"
+      :items="languages"
+    ></list-default>
   </div>
 </template>
 
@@ -39,6 +47,15 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 60%;
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  @media screen and (max-width: 600px) {
+    margin-bottom: 110px;
+  }
+
   &_list {
     width: auto;
     margin: 20px 0;

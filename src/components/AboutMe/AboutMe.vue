@@ -1,11 +1,18 @@
 <template>
   <div class="about-me">
     <div class="about-me_wrapper">
-      <my-info :person-name="FIO" :person-job="job" :person-CV="urlCV"></my-info>
+      <my-info
+        :person-name="FIO"
+        :person-job="job"
+        :person-CV="urlCV"
+      ></my-info>
       <my-description :profile="profile" :location="location"></my-description>
     </div>
     <div class="about-me_wrapper">
-      <my-contacts class="about-me_wrapper__container" :contacts="contacts"></my-contacts>
+      <my-contacts
+        class="about-me_wrapper__container"
+        :contacts="contacts"
+      ></my-contacts>
     </div>
   </div>
 </template>
@@ -46,14 +53,35 @@ export default {
 .about-me {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   &_wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 48%;
     height: 70vh;
+    @media screen and (max-width: 960px) {
+      height: 60vh;
+      width: 90%;
+    }
+    @media screen and (max-width: 600px) {
+      height: auto;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
     &__container {
       width: 70%;
+      @media screen and (max-width: 960px) {
+        width: 90%;
+      }
+      @media screen and (max-width: 400px) {
+        width: 100%;
+      }
     }
   }
 }

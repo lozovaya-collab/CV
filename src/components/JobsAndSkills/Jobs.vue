@@ -8,8 +8,13 @@
       </div>
       <div class="jobs_item__description">
         <span class="jobs_item__description name">{{ job.company }}</span>
-        <span class="jobs_item__description occupation">{{ job.occupation }}</span>
-        <list-default :mark="'&#8212;'" :items="job.responsibilities"></list-default>
+        <span class="jobs_item__description occupation">{{
+          job.occupation
+        }}</span>
+        <list-default
+          :mark="'&#8212;'"
+          :items="job.responsibilities"
+        ></list-default>
       </div>
     </div>
   </div>
@@ -42,19 +47,38 @@ export default {
 
 .jobs {
   width: 100%;
+
   &_item {
     display: flex;
     justify-content: space-between;
     margin: 20px 0 0 0;
     width: 100%;
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      border: 1px solid $blue;
+      border-radius: 35px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
     &__period {
       @include fontText($black, 400);
       width: 50%;
+      @media screen and (max-width: 960px) {
+        width: 100%;
+        font-size: 14px;
+      }
     }
     &__description {
       display: flex;
       flex-direction: column;
       width: 50%;
+      @media screen and (max-width: 1200px) {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 14px;
+      }
+
       .name {
         @include fontText($black, 600);
         margin-bottom: 15px;

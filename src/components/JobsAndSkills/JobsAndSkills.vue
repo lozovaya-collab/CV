@@ -28,11 +28,22 @@ export default {
 .jobs-and-skills {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    justify-content: center;
+  }
   &_wrapper {
     display: flex;
     justify-content: center;
     width: 48%;
     height: 70vh;
+    @media screen and (max-width: 960px) {
+      width: 100%;
+      height: auto;
+    }
+    @media screen and (max-width: 600px) {
+      margin-bottom: 40px;
+    }
   }
 }
 </style>

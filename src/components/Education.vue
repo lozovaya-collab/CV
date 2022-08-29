@@ -2,7 +2,11 @@
   <div class="education">
     <div class="education_wrapper">
       <headline>ОБРАЗОВАНИЕ</headline>
-      <div class="education_item" v-for="(education, index) in educations" :key="index">
+      <div
+        class="education_item"
+        v-for="(education, index) in educations"
+        :key="index"
+      >
         <div class="education_item__period">
           <span>{{ education.dateStart }}</span> -
           <span>{{
@@ -10,8 +14,12 @@
           }}</span>
         </div>
         <div class="education_item__description">
-          <span class="education_item__description name">{{ education.university }}</span>
-          <span class="education_item__description level">{{ education.level }}</span>
+          <span class="education_item__description name">{{
+            education.university
+          }}</span>
+          <span class="education_item__description level">{{
+            education.level
+          }}</span>
           <span class="education_item__description subtitle">{{
             education.subtitle
           }}</span>
@@ -20,13 +28,21 @@
     </div>
     <div class="education_wrapper">
       <headline>ТРЕНИНГИ</headline>
-      <div class="education_item" v-for="(training, index) in trainings" :key="index">
+      <div
+        class="education_item"
+        v-for="(training, index) in trainings"
+        :key="index"
+      >
         <div class="education_item__period">
           <span>{{ training.dateStart }}</span> -
-          <span>{{ training.dateEnd === null ? "наст. время" : training.dateEnd }}</span>
+          <span>{{
+            training.dateEnd === null ? "наст. время" : training.dateEnd
+          }}</span>
         </div>
         <div class="education_item__description">
-          <span class="education_item__description name">{{ training.training }}</span>
+          <span class="education_item__description name">{{
+            training.training
+          }}</span>
           <a
             class="education_item__description sertificate"
             :href="training.sertificate"
@@ -66,23 +82,52 @@ export default {
 .education {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    justify-content: center;
+  }
   &_wrapper {
     width: 48%;
     height: 70vh;
+    @media screen and (max-width: 960px) {
+      width: 100%;
+      height: auto;
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 150px;
+      }
+    }
   }
   &_item {
     display: flex;
     justify-content: space-between;
     margin: 20px 0 0 0;
     width: 100%;
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      border: 1px solid $blue;
+      border-radius: 35px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
     &__period {
       @include fontText($black, 400);
       width: 50%;
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        font-size: 14px;
+      }
     }
     &__description {
       display: flex;
       flex-direction: column;
       width: 50%;
+      @media screen and (max-width: 1200px) {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 14px;
+      }
       .name {
         @include fontText($black, 600);
         margin-bottom: 15px;

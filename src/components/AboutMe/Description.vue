@@ -37,8 +37,12 @@ export default {
   padding: 20px;
   border: 5px solid $blue;
   border-radius: 40px;
-
   box-sizing: border-box;
+  @media screen and (max-width: 1100px) {
+    height: 65%;
+    font-size: 14px;
+  }
+
   &_text {
     line-height: 25px;
     & > p {
@@ -50,6 +54,9 @@ export default {
     @include fontText($black, 500);
     display: flex;
     align-items: center;
+    @media screen and (max-width: 480px) {
+      margin-top: 15px;
+    }
     &__icon {
       width: 20px;
       height: 20px;

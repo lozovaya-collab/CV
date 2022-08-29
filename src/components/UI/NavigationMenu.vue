@@ -52,9 +52,13 @@ ul {
     width: var(--size);
     height: var(--size);
     background: $blue;
+    border-radius: 50%;
     margin: 0 3px;
     color: $black;
     position: relative;
+    @media screen and (max-width: 600px) {
+      background: none;
+    }
   }
 }
 
@@ -83,6 +87,9 @@ ul {
   z-index: 1;
   background: transparent;
   text-align: center;
+  @media screen and (max-width: 370px) {
+    background: $blue;
+  }
 }
 
 .menu li {
@@ -92,7 +99,6 @@ ul {
   justify-content: center;
   transition: all 0.85s ease;
   height: calc(var(--size) * 2);
-
   &:hover {
     transition: all 0.5s cubic-bezier(0.09, 1.98, 0.41, 0.71);
     transform: translateY(-53%);

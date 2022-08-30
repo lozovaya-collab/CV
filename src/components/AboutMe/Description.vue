@@ -2,7 +2,14 @@
   <div class="description">
     <div class="description_text">
       <p v-for="(text, index) in profile" :key="index">
-        {{ text }}
+        {{ index !== profile.length - 1 ? text : null }}
+        <a
+          class="link"
+          target="_blank"
+          v-if="index === profile.length - 1"
+          :href="hrefYelpClone"
+          >{{ text }}</a
+        >
       </p>
     </div>
 
@@ -20,7 +27,7 @@
 <script>
 export default {
   name: "my-description",
-  props: ["profile", "location"],
+  props: ["profile", "location", "hrefYelpClone"],
 };
 </script>
 
@@ -61,6 +68,15 @@ export default {
       width: 20px;
       height: 20px;
       margin-right: 15px;
+    }
+  }
+  .link {
+    @include fontText($black, 500);
+    &:hover {
+      color: $blue;
+    }
+    @media screen and (max-width: 1100px) {
+      font-size: 14px;
     }
   }
 }

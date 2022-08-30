@@ -1,18 +1,15 @@
 <template>
   <div class="about-me">
     <div class="about-me_wrapper">
-      <my-info
-        :person-name="FIO"
-        :person-job="job"
-        :person-CV="urlCV"
-      ></my-info>
-      <my-description :profile="profile" :location="location"></my-description>
+      <my-info :person-name="FIO" :person-job="job" :person-CV="urlCV"></my-info>
+      <my-description
+        :href-yelp-clone="hrefYelpCLone"
+        :profile="profile"
+        :location="location"
+      ></my-description>
     </div>
     <div class="about-me_wrapper">
-      <my-contacts
-        class="about-me_wrapper__container"
-        :contacts="contacts"
-      ></my-contacts>
+      <my-contacts class="about-me_wrapper__container" :contacts="contacts"></my-contacts>
     </div>
   </div>
 </template>
@@ -42,6 +39,7 @@ export default {
       profile: "AboutMeModule/GET_PROFILE",
       location: "AboutMeModule/GET_LOCATION",
       contacts: "AboutMeModule/GET_CONTACTS",
+      hrefYelpCLone: "AboutMeModule/GET_HREF_YELP",
     }),
   },
 };

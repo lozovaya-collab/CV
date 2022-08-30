@@ -8,13 +8,17 @@
       </div>
       <div class="jobs_item__description">
         <span class="jobs_item__description name">{{ job.company }}</span>
-        <span class="jobs_item__description occupation">{{
-          job.occupation
-        }}</span>
-        <list-default
-          :mark="'&#8212;'"
-          :items="job.responsibilities"
-        ></list-default>
+        <p class="jobs_item__description job-description">{{ job.description }}</p>
+        <p class="jobs_item__description occupation">
+          Роль на проекте: <span>{{ job.occupation }}</span>
+        </p>
+        <p class="jobs_item__description occupation">
+          Команда: <span>{{ job.team }}</span>
+        </p>
+        <p class="jobs_item__description occupation">
+          Технологии: <span>{{ job.stack }}</span>
+        </p>
+        <list-default :mark="'&#8212;'" :items="job.responsibilities"></list-default>
       </div>
     </div>
   </div>
@@ -78,14 +82,26 @@ export default {
         width: 100%;
         font-size: 14px;
       }
-
       .name {
+        @include fontText($black, 600);
+        font-size: 20px;
+        margin-bottom: 0 0 15px 0;
+      }
+      .job-description {
+        width: 100%;
         @include fontText($black, 600);
         margin-bottom: 15px;
       }
       .occupation {
         @include fontText($black, 500);
+        display: flex;
+        flex-direction: row;
         width: 100%;
+        margin: 5px;
+        & > span {
+          @include fontText($black, 400);
+          margin-left: 10px;
+        }
       }
     }
   }

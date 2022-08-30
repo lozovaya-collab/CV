@@ -2,13 +2,15 @@ const state = {
     info: {
         FIO: "Лозовая Анна Яковлевна",
         job: "Front-end разработчик (Vue)",
-        urlCV: "https://drive.google.com/file/d/1SJFGjjUAg4oztn7qbBWGmRaBCWwze1UP/view?usp=sharing",
+        urlCV: "https://drive.google.com/file/d/147gzyNIHNDaPduPeHzVsHiaxIqvXedaW/view?usp=sharing",
         location: "Санкт-Петербург, Россия",
     },
-    profile: `Занимаюсь разработкой SPA на Vue. Обожаю верстать и вдыхать в макеты жизнь. За время своей работы сталкивалась с технологией WebRTC.  
-    Всегда готова к изучению чего-то нового.
+    profile: `Занимаюсь разработкой SPA на Vue.  
+    В университете имела опыт работы с MySQL, MongoDB, Firebase, писала курсовой проект на Svelte и Vue.
+    В свободное время люблю гулять с друзьями, заниматься спортом/танцами и читать.
     Ответственная, неконфликтная, коммуникабельная.
-    Готова работать в команде и умею читать чужой код.`,
+    Проходила тренинг от Rs School по Front-end/JS (2020/21) и в качестве курсового проекта было реализовано приложение YelpCLone
+    Статья о YelpClone`,
     contacts: [
         { img: "phone-contact.png", text: "+7 (965) 071 - 56 - 57", href: "tel:+79650715657" },
         { img: "mail.png", text: "anyalozovaya2014@gmail.com", href: "mailto:anyalozovaya2014@gmail.com" },
@@ -16,6 +18,7 @@ const state = {
         { img: "github.png", text: " github.com/lozovaya-collab", href: "https://github.com/lozovaya-collab" },
 
     ],
+    hrefArticleYelp: "https://anyalozovaya2014.medium.com/yelpclone-1ba322f81b7c"
 
 };
 const getters = {
@@ -36,6 +39,9 @@ const getters = {
     },
     GET_CONTACTS(state) {
         return state.contacts;
+    },
+    GET_HREF_YELP(state) {
+        return state.hrefArticleYelp;
     },
 
 };

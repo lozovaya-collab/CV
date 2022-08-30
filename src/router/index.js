@@ -20,7 +20,7 @@ const routes = [{
         path: "/education",
         name: "Education",
         component: Education,
-        icon: "mortarboard.png",
+        icon: "mortatboard.png",
     },
 ];
 

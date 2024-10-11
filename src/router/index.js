@@ -11,13 +11,13 @@ const routes = [{
 
     },
     {
-        path: "/jobs",
+        path: "/CV/jobs",
         name: "Jobs and Skills",
         component: JobsAndSkills,
         icon: "suitcase.png",
     },
     {
-        path: "/education",
+        path: "/CV/education",
         name: "Education",
         component: Education,
         icon: "mortatboard.png",

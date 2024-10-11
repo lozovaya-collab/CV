@@ -3,7 +3,7 @@
     <div class="about-me_wrapper">
       <my-info :person-name="FIO" :person-job="job" :person-CV="urlCV"></my-info>
       <my-description
-        :href-yelp-clone="hrefYelpCLone"
+        :href-hackaton="hrefHackaton"
         :profile="profile"
         :location="location"
       ></my-description>
@@ -39,7 +39,7 @@ export default {
       profile: "AboutMeModule/GET_PROFILE",
       location: "AboutMeModule/GET_LOCATION",
       contacts: "AboutMeModule/GET_CONTACTS",
-      hrefYelpCLone: "AboutMeModule/GET_HREF_YELP",
+      hrefHackaton: "AboutMeModule/GET_HREF_HACKATON",
     }),
   },
 };
@@ -61,7 +61,7 @@ export default {
     flex-direction: column;
     align-items: center;
     width: 48%;
-    height: 70vh;
+    height: fit-content;
     @media screen and (max-width: 960px) {
       height: 60vh;
       width: 90%;

@@ -7,7 +7,7 @@
           class="link"
           target="_blank"
           v-if="index === profile.length - 1"
-          :href="hrefYelpClone"
+          :href="hrefHackaton"
           >{{ text }}</a
         >
       </p>
@@ -27,7 +27,7 @@
 <script>
 export default {
   name: "my-description",
-  props: ["profile", "location", "hrefYelpClone"],
+  props: ["profile", "location", "hrefHackaton"],
 };
 </script>
 

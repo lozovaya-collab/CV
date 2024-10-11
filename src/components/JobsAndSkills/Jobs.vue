@@ -1,7 +1,8 @@
 <template>
   <div class="jobs">
     <headline>ОПЫТ РАБОТЫ</headline>
-    <div class="jobs_item" v-for="(job, index) in jobs" :key="index">
+    <div class="jobs-wrapper">
+      <div class="jobs_item" v-for="(job, index) in jobs" :key="index">
       <div class="jobs_item__period">
         <span>{{ job.dateStart }}</span> -
         <span>{{ job.dateEnd === null ? "наст. время" : job.dateEnd }}</span>
@@ -18,9 +19,14 @@
         <p class="jobs_item__description occupation">
           Технологии: <span>{{ job.stack }}</span>
         </p>
+        <h3 class="jobs_title" v-if="job.projects.length">Проекты: </h3>
+        <list-default v-if="job.projects.length" :mark="'&#8212;'" :items="job.projects"></list-default>
+        <h3 class="jobs_title">Задачи: </h3>
         <list-default :mark="'&#8212;'" :items="job.responsibilities"></list-default>
       </div>
     </div>
+    </div>
+    
   </div>
 </template>
 
@@ -51,7 +57,16 @@ export default {
 
 .jobs {
   width: 100%;
-
+  &-wrapper{
+    overflow-y: auto;
+      overflow-x: hidden;
+      height: 70vh;
+  }
+  &_title{
+    width: 100%;
+    @include fontText($black, 600);
+    margin-bottom: 10px;
+  }
   &_item {
     display: flex;
     justify-content: space-between;

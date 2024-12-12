@@ -1,4 +1,5 @@
 <template>
+  commit 3
   <div class="contacts">
     <headline>КОНТАКТЫ</headline>
     <list :items="contacts"></list>

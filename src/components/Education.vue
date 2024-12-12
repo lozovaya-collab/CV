@@ -1,4 +1,6 @@
 <template>
+
+  commit 3
   <div class="education">
     <div class="education_wrapper">
       <headline>ОБРАЗОВАНИЕ</headline>

@@ -1,6 +1,7 @@
 <template>
   <div class="contacts">
     <headline>КОНТАКТЫ</headline>
+    1
     <list :items="contacts"></list>
   </div>
 </template>

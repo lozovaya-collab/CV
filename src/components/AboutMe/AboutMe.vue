@@ -1,5 +1,6 @@
 <template>
   <div class="about-me">
+    commit 1
     <div class="about-me_wrapper">
       <my-info :person-name="FIO" :person-job="job" :person-CV="urlCV"></my-info>
       <my-description

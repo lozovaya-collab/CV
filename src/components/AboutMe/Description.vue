@@ -1,5 +1,6 @@
 <template>
   <div class="description">
+    1
     <div class="description_text">
       <p v-for="(text, index) in profile" :key="index">
         {{ index !== profile.length - 1 ? text : null }}

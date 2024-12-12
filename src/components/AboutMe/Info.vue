@@ -1,6 +1,6 @@
 <template>
   <div class="info">
-    5
+    55
     <img src="../../assets/avatar.png" alt="Avatar" class="info_avatar" />
     <div class="info_wrapper">
       <p class="info_FIO">{{ personName }}</p>

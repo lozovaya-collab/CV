@@ -1,5 +1,6 @@
 <template>
   <div class="about-me">
+    1
     <div class="about-me_wrapper">
       <my-info :person-name="FIO" :person-job="job" :person-CV="urlCV"></my-info>
       <my-description
@@ -8,6 +9,7 @@
         :location="location"
       ></my-description>
     </div>
+    2
     <div class="about-me_wrapper">
       <my-contacts class="about-me_wrapper__container" :contacts="contacts"></my-contacts>
     </div>

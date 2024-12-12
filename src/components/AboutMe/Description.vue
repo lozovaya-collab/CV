@@ -1,4 +1,5 @@
 <template>
+  commit 4
   <div class="description">
     <div class="description_text">
       <p v-for="(text, index) in profile" :key="index">

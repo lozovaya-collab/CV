@@ -2,7 +2,7 @@
   <div class="about-me">
     <div class="about-me_wrapper">
       <my-info :person-name="FIO" :person-job="job" :person-CV="urlCV"></my-info>
-      commit 1
+      commit 11
       <my-description
         :href-hackaton="hrefHackaton"
         :profile="profile"

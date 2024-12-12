@@ -8,6 +8,7 @@
         :profile="profile"
         :location="location"
       ></my-description>
+      commit 2
     </div>
     <div class="about-me_wrapper">
       <my-contacts class="about-me_wrapper__container" :contacts="contacts"></my-contacts>

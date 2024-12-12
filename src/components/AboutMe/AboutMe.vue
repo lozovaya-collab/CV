@@ -9,6 +9,7 @@
         :location="location"
       ></my-description>
     </div>
+    commit 2
     <div class="about-me_wrapper">
       <my-contacts class="about-me_wrapper__container" :contacts="contacts"></my-contacts>
     </div>

@@ -2,12 +2,13 @@
   <div class="about-me">
     <div class="about-me_wrapper">
       <my-info :person-name="FIO" :person-job="job" :person-CV="urlCV"></my-info>
-      commit 1
+      commit 11
       <my-description
         :href-hackaton="hrefHackaton"
         :profile="profile"
         :location="location"
       ></my-description>
+      commit 2
     </div>
     <div class="about-me_wrapper">
       <my-contacts class="about-me_wrapper__container" :contacts="contacts"></my-contacts>

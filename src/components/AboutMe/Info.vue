@@ -1,4 +1,5 @@
 <template>
+  commit 5
   <div class="info">
     <img src="../../assets/avatar.png" alt="Avatar" class="info_avatar" />
     <div class="info_wrapper">

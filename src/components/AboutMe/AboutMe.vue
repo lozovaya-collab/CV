@@ -1,8 +1,6 @@
 <template>
   <div class="about-me">
     <div class="about-me_wrapper">
-      1
-      3
       <my-info :person-name="FIO" :person-job="job" :person-CV="urlCV"></my-info>
       <my-description
         :href-hackaton="hrefHackaton"

@@ -1,7 +1,7 @@
 <template>
   <div class="about-me">
     <div class="about-me_wrapper">
-      commit 1
+      commit 11
       <my-info :person-name="FIO" :person-job="job" :person-CV="urlCV"></my-info>
       <my-description
         :href-hackaton="hrefHackaton"
